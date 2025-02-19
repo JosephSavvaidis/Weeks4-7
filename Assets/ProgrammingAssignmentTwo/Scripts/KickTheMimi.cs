@@ -75,7 +75,7 @@ public class KickTheMimi : MonoBehaviour
     }
 
     public void bonkMimi() {
-    
+        animator.SetInteger("Attack", 4);
     }
     public void destoryMIMI() {
         
