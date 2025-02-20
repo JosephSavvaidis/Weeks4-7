@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class NewSlide : MonoBehaviour
 {
+    //finalcommit
     // This is the SpriteRenderer I want to recolo
     public SpriteRenderer spriteRenderer;
 
