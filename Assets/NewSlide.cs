@@ -6,16 +6,25 @@ using UnityEngine.UI;
 
 public class NewSlide : MonoBehaviour
 {
-    public SpriteRenderer spriteRenderer; 
+    // This is the SpriteRenderer I want to recolo
+    public SpriteRenderer spriteRenderer;
+
+    // This is the UI Slider I’m reading thvalue from
     public Slider colorSlider;
-    private void Start()
+
+    // In Update, I’ll read the slider’s value andapply it to the sprite’s color.
+    private void Update()
     {
-        
-    }
-     void Update()
-    {
+        // Logging the current slider value for reference.
         Debug.Log(colorSlider.value);
-        spriteRenderer.material.color = new Color(colorSlider.value * 2f, colorSlider.value * 2f, colorSlider.value * 2f, 1f);
+
+        // Multiplying the slider value by 2 to range from 0 (black) up to 2 (very bright white).
+        spriteRenderer.material.color = new Color(
+            colorSlider.value * 2f,
+            colorSlider.value * 2f,
+            colorSlider.value * 2f,
+            1f
+        );
     }
-    
+
 }
